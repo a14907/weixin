@@ -73,7 +73,7 @@ namespace DemoWeb.Controllers
             if (baseModel.MsgType == "event")
             {
                 EventMsg model = XmlHelper.ConvertToModel<EventMsg>(xmlData);
-                //EventMsgBll.HandlerTheEvent(model);
+                //EventMsgBll.HandlerTheEvent(model);  
                 EventMsgBll.Add(model);
                 EventMsgBll.SaveChanges();
                 return "";
