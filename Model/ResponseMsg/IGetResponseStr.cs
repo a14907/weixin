@@ -9,5 +9,7 @@ namespace Model.ResponseMsg
     public interface IGetResponseStr
     {
         string GetResponseStr();
+
+        string SendGuestMsg();
     }
 }

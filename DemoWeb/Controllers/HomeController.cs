@@ -13,6 +13,7 @@ using Common;
 using DemoWeb.Models;
 using Model.ResponseMsg;
 using WebHelper;
+using Newtonsoft.Json;
 
 namespace DemoWeb.Controllers
 {
@@ -230,6 +231,17 @@ namespace DemoWeb.Controllers
         #endregion
 
         #region 发送客服消息
+
+        public ActionResult SendMsg()
+        {
+            ResponseNewsMsg obj = new ResponseNewsMsg("121")
+            {
+                Articles = new[] { new ResponseNewsMsg.Article {
+                     Description="weq", PicUrl="qwe", Title="qwe", Url="qwe"
+                } }
+            };
+            return Content(obj.SendGuestMsg());
+        }
 
         #endregion
     }
