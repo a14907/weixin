@@ -25,7 +25,7 @@ namespace DemoWeb.Controllers
         {
             EventMsgBll = eventMsgBll; ;
             ImageMsgBll = imageMsgBll; ;
-            LinkBll = linkBll; ;
+            LinkBll = linkBll;
             LocationMsgBll = locationMsgBll; ;
             TextMsgBll = textMsgBll; ;
             VideoMsgBll = videoMsgBll; ;
