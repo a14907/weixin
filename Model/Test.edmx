@@ -4,114 +4,114 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DB_999A5F_WDQWeiXinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="EventMsg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Event" Type="nvarchar" MaxLength="128" />
-          <Property Name="Latitude" Type="nvarchar" MaxLength="128" />
-          <Property Name="Longitude" Type="nvarchar" MaxLength="128" />
-          <Property Name="Precision" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
-          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
-          <Property Name="EventKey" Type="nvarchar" MaxLength="128" />
-          <Property Name="Ticket" Type="nvarchar" MaxLength="128" />
-        </EntityType>
-        <EntityType Name="ImageMsg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PicUrl" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
-          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
-        </EntityType>
-        <EntityType Name="LinkMsg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="128" />
-          <Property Name="Description" Type="nvarchar" MaxLength="256" />
-          <Property Name="Url" Type="nvarchar" MaxLength="256" />
-          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
-          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
-        </EntityType>
-        <EntityType Name="LocationMsg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Location_X" Type="nvarchar" MaxLength="128" />
-          <Property Name="Location_Y" Type="nvarchar" MaxLength="128" />
-          <Property Name="Scale" Type="nvarchar" MaxLength="128" />
-          <Property Name="Label" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
-          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
-        </EntityType>
-        <EntityType Name="TextMsg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
-          <Property Name="Content" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
-        </EntityType>
-        <EntityType Name="VideoMsg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MediaId" Type="nvarchar" MaxLength="128" />
-          <Property Name="ThumbMediaId" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
-          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
-        </EntityType>
-        <EntityType Name="VoiceMsg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MediaId" Type="nvarchar" MaxLength="128" />
-          <Property Name="Format" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
-          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
-          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
-          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
-          <Property Name="Recognition" Type="nvarchar" MaxLength="128" />
-        </EntityType>
-        <EntityContainer Name="DB_999A5F_WDQWeiXinModelStoreContainer">
-          <EntitySet Name="EventMsg" EntityType="Self.EventMsg" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ImageMsg" EntityType="Self.ImageMsg" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LinkMsg" EntityType="Self.LinkMsg" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LocationMsg" EntityType="Self.LocationMsg" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TextMsg" EntityType="Self.TextMsg" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="VideoMsg" EntityType="Self.VideoMsg" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="VoiceMsg" EntityType="Self.VoiceMsg" Schema="dbo" store:Type="Tables" />
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
+    <Schema Namespace="DB_999A5F_WDQWeiXinModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DB_999A5F_WDQWeiXinModelStoreContainer">
+    <EntitySet Name="EventMsg" EntityType="DB_999A5F_WDQWeiXinModel.Store.EventMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImageMsg" EntityType="DB_999A5F_WDQWeiXinModel.Store.ImageMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LinkMsg" EntityType="DB_999A5F_WDQWeiXinModel.Store.LinkMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LocationMsg" EntityType="DB_999A5F_WDQWeiXinModel.Store.LocationMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TextMsg" EntityType="DB_999A5F_WDQWeiXinModel.Store.TextMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VideoMsg" EntityType="DB_999A5F_WDQWeiXinModel.Store.VideoMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VoiceMsg" EntityType="DB_999A5F_WDQWeiXinModel.Store.VoiceMsg" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="EventMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Event" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Latitude" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Longitude" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Precision" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="ToUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="FromUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="CreateTime" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgType" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="EventKey" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Ticket" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="ImageMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PicUrl" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="ToUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="FromUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="CreateTime" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgType" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="LinkMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="Url" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="MsgId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="ToUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="FromUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="CreateTime" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgType" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="LocationMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Location_X" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Location_Y" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Scale" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Label" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="ToUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="FromUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="CreateTime" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgType" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="TextMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ToUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="FromUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="CreateTime" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgType" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Content" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgId" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="VideoMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MediaId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="ThumbMediaId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="ToUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="FromUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="CreateTime" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgType" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="VoiceMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MediaId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Format" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgId" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="ToUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="FromUserName" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="CreateTime" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="MsgType" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="Recognition" Type="nvarchar" Nullable="true" MaxLength="128" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_999A5F_WDQWeiXinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -225,115 +225,114 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_999A5F_WDQWeiXinModelStoreContainer" CdmEntityContainer="DB_999A5F_WDQWeiXinEntities">
-          <EntitySetMapping Name="EventMsg">
-            <EntityTypeMapping TypeName="DB_999A5F_WDQWeiXinModel.EventMsg">
-              <MappingFragment StoreEntitySet="EventMsg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Event" ColumnName="Event" />
-                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-                <ScalarProperty Name="Precision" ColumnName="Precision" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-                <ScalarProperty Name="EventKey" ColumnName="EventKey" />
-                <ScalarProperty Name="Ticket" ColumnName="Ticket" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ImageMsg">
-            <EntityTypeMapping TypeName="DB_999A5F_WDQWeiXinModel.ImageMsg">
-              <MappingFragment StoreEntitySet="ImageMsg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="PicUrl" ColumnName="PicUrl" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="LinkMsg">
-            <EntityTypeMapping TypeName="DB_999A5F_WDQWeiXinModel.LinkMsg">
-              <MappingFragment StoreEntitySet="LinkMsg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Url" ColumnName="Url" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="LocationMsg">
-            <EntityTypeMapping TypeName="DB_999A5F_WDQWeiXinModel.LocationMsg">
-              <MappingFragment StoreEntitySet="LocationMsg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Location_X" ColumnName="Location_X" />
-                <ScalarProperty Name="Location_Y" ColumnName="Location_Y" />
-                <ScalarProperty Name="Scale" ColumnName="Scale" />
-                <ScalarProperty Name="Label" ColumnName="Label" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TextMsg">
-            <EntityTypeMapping TypeName="DB_999A5F_WDQWeiXinModel.TextMsg">
-              <MappingFragment StoreEntitySet="TextMsg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="VideoMsg">
-            <EntityTypeMapping TypeName="DB_999A5F_WDQWeiXinModel.VideoMsg">
-              <MappingFragment StoreEntitySet="VideoMsg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="MediaId" ColumnName="MediaId" />
-                <ScalarProperty Name="ThumbMediaId" ColumnName="ThumbMediaId" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="VoiceMsg">
-            <EntityTypeMapping TypeName="DB_999A5F_WDQWeiXinModel.VoiceMsg">
-              <MappingFragment StoreEntitySet="VoiceMsg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="MediaId" ColumnName="MediaId" />
-                <ScalarProperty Name="Format" ColumnName="Format" />
-                <ScalarProperty Name="MsgId" ColumnName="MsgId" />
-                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
-                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="MsgType" ColumnName="MsgType" />
-                <ScalarProperty Name="Recognition" ColumnName="Recognition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_999A5F_WDQWeiXinModelStoreContainer" CdmEntityContainer="DB_999A5F_WDQWeiXinEntities">
+    <EntitySetMapping Name="EventMsg">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_999A5F_WDQWeiXinModel.EventMsg)">
+        <MappingFragment StoreEntitySet="EventMsg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Precision" ColumnName="Precision" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="EventKey" ColumnName="EventKey" />
+          <ScalarProperty Name="Ticket" ColumnName="Ticket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageMsg">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_999A5F_WDQWeiXinModel.ImageMsg)">
+        <MappingFragment StoreEntitySet="ImageMsg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PicUrl" ColumnName="PicUrl" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinkMsg">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_999A5F_WDQWeiXinModel.LinkMsg)">
+        <MappingFragment StoreEntitySet="LinkMsg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocationMsg">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_999A5F_WDQWeiXinModel.LocationMsg)">
+        <MappingFragment StoreEntitySet="LocationMsg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Location_X" ColumnName="Location_X" />
+          <ScalarProperty Name="Location_Y" ColumnName="Location_Y" />
+          <ScalarProperty Name="Scale" ColumnName="Scale" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TextMsg">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_999A5F_WDQWeiXinModel.TextMsg)">
+        <MappingFragment StoreEntitySet="TextMsg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VideoMsg">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_999A5F_WDQWeiXinModel.VideoMsg)">
+        <MappingFragment StoreEntitySet="VideoMsg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MediaId" ColumnName="MediaId" />
+          <ScalarProperty Name="ThumbMediaId" ColumnName="ThumbMediaId" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VoiceMsg">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_999A5F_WDQWeiXinModel.VoiceMsg)">
+        <MappingFragment StoreEntitySet="VoiceMsg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MediaId" ColumnName="MediaId" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="MsgId" ColumnName="MsgId" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MsgType" ColumnName="MsgType" />
+          <ScalarProperty Name="Recognition" ColumnName="Recognition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -347,7 +346,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
       </DesignerInfoPropertySet>
     </Options>

@@ -67,7 +67,7 @@
     <Compile Include="ResponseMsg\IGetResponseStr.cs" />
     <Compile Include="ResponseMsg\ResponseVoiceMsg.cs" />
     <Compile Include="ResponseMsg\ResponseVideoMsg.cs" />
-    <Compile Include="ResponseMsg\ResponsemusicMsg.cs" />
+    <Compile Include="ResponseMsg\ResponseMusicMsg.cs" />
     <Compile Include="ResponseMsg\ResponseNewsMsg.cs" />
     <Compile Include="ResponseMsg\ResponseImageMsg.cs" />
     <Compile Include="ResponseMsg\ResponseTextMsg.cs" />
@@ -119,6 +119,9 @@
       <DependentUpon>Test.edmx</DependentUpon>
       <LastGenOutput>Test.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Test.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

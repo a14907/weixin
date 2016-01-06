@@ -103,6 +103,13 @@ namespace DemoWeb.Controllers
                             ImageMsg model = XmlHelper.ConvertToModel<ImageMsg>(xmlData);
                             ImageMsgBll.Add(model);
                             //TODO 处理用户的图片信息
+                            response = new ResponseImageMsg
+                            {
+                                CreateTime = CommonHelp.TimeToLong(DateTime.Now),
+                                FromUserName = baseModel.ToUserName,
+                                ToUserName = baseModel.FromUserName,
+                                MediaId = "1212"
+                            };
                         }
                         break;
                     case MsgType.voice:
@@ -113,6 +120,13 @@ namespace DemoWeb.Controllers
                             {
                                 //TODO 处理用户的语音信息
                             }
+                            response = new ResponseVoiceMsg
+                            {
+                                FromUserName = baseModel.ToUserName,
+                                ToUserName = baseModel.FromUserName,
+                                CreateTime = CommonHelp.TimeToLong(DateTime.Now),
+                                MediaId = "123"
+                            };
                         }
                         break;
                     case MsgType.video:
@@ -122,6 +136,15 @@ namespace DemoWeb.Controllers
                             VideoMsgBll.Add(model);
                             //TODO 处理用户的小视频信息
                         }
+                        response = new ResponseVideoMsg
+                        {
+                            FromUserName = baseModel.ToUserName,
+                            ToUserName = baseModel.FromUserName,
+                            CreateTime = CommonHelp.TimeToLong(DateTime.Now),
+                            MediaId = "123",
+                            Description = "test",
+                            Title = "回复视频消息"
+                        };
                         break;
                     case MsgType.location:
                         {
@@ -129,6 +152,17 @@ namespace DemoWeb.Controllers
                             LocationMsgBll.Add(model);
                             //TODO 处理用户的地理位置信息
                         }
+                        response = new ResponseMusicMsg
+                        {
+                            FromUserName = baseModel.ToUserName,
+                            ToUserName = baseModel.FromUserName,
+                            CreateTime = CommonHelp.TimeToLong(DateTime.Now),
+                            Title = "回复音乐消息",
+                            Description = "一段感人的音乐",
+                            HQMusicUrl = "http://baidu.music.com",
+                            MusicUrl = "fuuuul",
+                            ThumbMediaId = "123"
+                        };
                         break;
                     case MsgType.link:
                         {
@@ -136,6 +170,16 @@ namespace DemoWeb.Controllers
                             LinkBll.Add(model);
                             //TODO 处理用户的连接信息
                         }
+                        response = new ResponseNewsMsg
+                        {
+                            FromUserName = baseModel.ToUserName,
+                            ToUserName = baseModel.FromUserName,
+                            CreateTime = CommonHelp.TimeToLong(DateTime.Now),
+                            ArticleCount = 1,
+                            Articles = new[] { new ResponseNewsMsg.Article {
+                                 Description="", PicUrl="", Title="", Url=""
+                            } },
+                        };
                         break;
                 }
 
@@ -183,6 +227,10 @@ namespace DemoWeb.Controllers
             res.Close();
             return stocks.ip_list.ToString();
         }
+        #endregion
+
+        #region 发送客服消息
+
         #endregion
     }
 }
