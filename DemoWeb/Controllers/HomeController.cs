@@ -70,74 +70,75 @@ namespace DemoWeb.Controllers
                 FromUserName = baseModel.ToUserName
             };//响应对象
 
-            if (baseModel.MsgType == "event")
-            {
-                EventMsg model = XmlHelper.ConvertToModel<EventMsg>(xmlData);
-                //EventMsgBll.HandlerTheEvent(model);  
-                EventMsgBll.Add(model);
-                EventMsgBll.SaveChanges();
-                return "";
-            }
-            var res = (MsgType)Enum.Parse(typeof(MsgType), baseModel.MsgType);
-            switch (res)
-            {
-                case MsgType.text:
-                    {
-                        TextMsg model = XmlHelper.ConvertToModel<TextMsg>(xmlData);
-                        TextMsgBll.Add(model);
-                        //TODO 处理用户的文字信息
-                        response = new ResponseTextMsg
-                        {
-                            CreateTime = CommonHelp.TimeToLong(DateTime.Now),
-                            ToUserName = baseModel.FromUserName,
-                            FromUserName = baseModel.ToUserName,
-                            Content = "欢迎关注我的微信!我是wdq!"
-                        };
-                    }
-                    break;
-                case MsgType.image:
-                    {
-                        ImageMsg model = XmlHelper.ConvertToModel<ImageMsg>(xmlData);
-                        ImageMsgBll.Add(model);
-                        //TODO 处理用户的图片信息
-                    }
-                    break;
-                case MsgType.voice:
-                    {
-                        VoiceMsg model = XmlHelper.ConvertToModel<VoiceMsg>(xmlData);
-                        VoiceMsgBll.Add(model);
-                        if (model.Recognition != null)
-                        {
-                            //TODO 处理用户的语音信息
-                        }
-                    }
-                    break;
-                case MsgType.video:
-                case MsgType.shortvideo:
-                    {
-                        VideoMsg model = XmlHelper.ConvertToModel<VideoMsg>(xmlData);
-                        VideoMsgBll.Add(model);
-                        //TODO 处理用户的小视频信息
-                    }
-                    break;
-                case MsgType.location:
-                    {
-                        LocationMsg model = XmlHelper.ConvertToModel<LocationMsg>(xmlData);
-                        LocationMsgBll.Add(model);
-                        //TODO 处理用户的地理位置信息
-                    }
-                    break;
-                case MsgType.link:
-                    {
-                        LinkMsg model = XmlHelper.ConvertToModel<LinkMsg>(xmlData);
-                        LinkBll.Add(model);
-                        //TODO 处理用户的连接信息
-                    }
-                    break;
-            }
             string result = "";
             try
             {
+                if (baseModel.MsgType == "event")
+                {
+                    EventMsg model = XmlHelper.ConvertToModel<EventMsg>(xmlData);
+                    //EventMsgBll.HandlerTheEvent(model);  
+                    EventMsgBll.Add(model);
+                    EventMsgBll.SaveChanges();
+                    return "";
+                }
+                var res = (MsgType)Enum.Parse(typeof(MsgType), baseModel.MsgType);
+                switch (res)
+                {
+                    case MsgType.text:
+                        {
+                            TextMsg model = XmlHelper.ConvertToModel<TextMsg>(xmlData);
+                            TextMsgBll.Add(model);
+                            //TODO 处理用户的文字信息
+                            response = new ResponseTextMsg
+                            {
+                                CreateTime = CommonHelp.TimeToLong(DateTime.Now),
+                                ToUserName = baseModel.FromUserName,
+                                FromUserName = baseModel.ToUserName,
+                                Content = "欢迎关注我的微信!我是wdq!"
+                            };
+                        }
+                        break;
+                    case MsgType.image:
+                        {
+                            ImageMsg model = XmlHelper.ConvertToModel<ImageMsg>(xmlData);
+                            ImageMsgBll.Add(model);
+                            //TODO 处理用户的图片信息
+                        }
+                        break;
+                    case MsgType.voice:
+                        {
+                            VoiceMsg model = XmlHelper.ConvertToModel<VoiceMsg>(xmlData);
+                            VoiceMsgBll.Add(model);
+                            if (model.Recognition != null)
+                            {
+                                //TODO 处理用户的语音信息
+                            }
+                        }
+                        break;
+                    case MsgType.video:
+                    case MsgType.shortvideo:
+                        {
+                            VideoMsg model = XmlHelper.ConvertToModel<VideoMsg>(xmlData);
+                            VideoMsgBll.Add(model);
+                            //TODO 处理用户的小视频信息
+                        }
+                        break;
+                    case MsgType.location:
+                        {
+                            LocationMsg model = XmlHelper.ConvertToModel<LocationMsg>(xmlData);
+                            LocationMsgBll.Add(model);
+                            //TODO 处理用户的地理位置信息
+                        }
+                        break;
+                    case MsgType.link:
+                        {
+                            LinkMsg model = XmlHelper.ConvertToModel<LinkMsg>(xmlData);
+                            LinkBll.Add(model);
+                            //TODO 处理用户的连接信息
+                        }
+                        break;
+                }
+
                 EventMsgBll.SaveChanges();
             }
             catch (DbEntityValidationException dbEx)

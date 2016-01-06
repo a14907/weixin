@@ -4,103 +4,103 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_999A5F_WDQWeiXinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_999A5F_WDQWeiXinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="EventMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Event" Type="nvarchar(max)" />
-          <Property Name="Latitude" Type="nvarchar(max)" />
-          <Property Name="Longitude" Type="nvarchar(max)" />
-          <Property Name="Precision" Type="nvarchar(max)" />
-          <Property Name="MsgId" Type="nvarchar(max)" />
-          <Property Name="ToUserName" Type="nvarchar(max)" />
-          <Property Name="FromUserName" Type="nvarchar(max)" />
-          <Property Name="CreateTime" Type="nvarchar(max)" />
-          <Property Name="MsgType" Type="nvarchar(max)" />
-          <Property Name="EventKey" Type="nchar" MaxLength="4000" Nullable="false" />
-          <Property Name="Ticket" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Event" Type="nvarchar" MaxLength="128" />
+          <Property Name="Latitude" Type="nvarchar" MaxLength="128" />
+          <Property Name="Longitude" Type="nvarchar" MaxLength="128" />
+          <Property Name="Precision" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
+          <Property Name="EventKey" Type="nvarchar" MaxLength="128" />
+          <Property Name="Ticket" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="ImageMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PicUrl" Type="nvarchar(max)" />
-          <Property Name="MsgId" Type="nvarchar(max)" />
-          <Property Name="ToUserName" Type="nvarchar(max)" />
-          <Property Name="FromUserName" Type="nvarchar(max)" />
-          <Property Name="CreateTime" Type="nvarchar(max)" />
-          <Property Name="MsgType" Type="nvarchar(max)" />
+          <Property Name="PicUrl" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="LinkMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar(max)" />
-          <Property Name="Description" Type="nvarchar(max)" />
-          <Property Name="Url" Type="nvarchar(max)" />
-          <Property Name="MsgId" Type="nvarchar(max)" />
-          <Property Name="ToUserName" Type="nvarchar(max)" />
-          <Property Name="FromUserName" Type="nvarchar(max)" />
-          <Property Name="CreateTime" Type="nvarchar(max)" />
-          <Property Name="MsgType" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar" MaxLength="128" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+          <Property Name="Url" Type="nvarchar" MaxLength="256" />
+          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="LocationMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Location_X" Type="nvarchar(max)" />
-          <Property Name="Location_Y" Type="nvarchar(max)" />
-          <Property Name="Scale" Type="nvarchar(max)" />
-          <Property Name="Label" Type="nvarchar(max)" />
-          <Property Name="MsgId" Type="nvarchar(max)" />
-          <Property Name="ToUserName" Type="nvarchar(max)" />
-          <Property Name="FromUserName" Type="nvarchar(max)" />
-          <Property Name="CreateTime" Type="nvarchar(max)" />
-          <Property Name="MsgType" Type="nvarchar(max)" />
+          <Property Name="Location_X" Type="nvarchar" MaxLength="128" />
+          <Property Name="Location_Y" Type="nvarchar" MaxLength="128" />
+          <Property Name="Scale" Type="nvarchar" MaxLength="128" />
+          <Property Name="Label" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="TextMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ToUserName" Type="nvarchar(max)" />
-          <Property Name="FromUserName" Type="nvarchar(max)" />
-          <Property Name="CreateTime" Type="nvarchar(max)" />
-          <Property Name="MsgType" Type="nvarchar(max)" />
-          <Property Name="Content" Type="nvarchar(max)" />
-          <Property Name="MsgId" Type="nvarchar(max)" />
+          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
+          <Property Name="Content" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="VideoMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MediaId" Type="nvarchar(max)" />
-          <Property Name="ThumbMediaId" Type="nvarchar(max)" />
-          <Property Name="MsgId" Type="nvarchar(max)" />
-          <Property Name="ToUserName" Type="nvarchar(max)" />
-          <Property Name="FromUserName" Type="nvarchar(max)" />
-          <Property Name="CreateTime" Type="nvarchar(max)" />
-          <Property Name="MsgType" Type="nvarchar(max)" />
+          <Property Name="MediaId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ThumbMediaId" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="VoiceMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MediaId" Type="nvarchar(max)" />
-          <Property Name="Format" Type="nvarchar(max)" />
-          <Property Name="MsgId" Type="nvarchar(max)" />
-          <Property Name="ToUserName" Type="nvarchar(max)" />
-          <Property Name="FromUserName" Type="nvarchar(max)" />
-          <Property Name="CreateTime" Type="nvarchar(max)" />
-          <Property Name="MsgType" Type="nvarchar(max)" />
-          <Property Name="Recognition" Type="nvarchar(max)" />
+          <Property Name="MediaId" Type="nvarchar" MaxLength="128" />
+          <Property Name="Format" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgId" Type="nvarchar" MaxLength="128" />
+          <Property Name="ToUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="FromUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreateTime" Type="nvarchar" MaxLength="128" />
+          <Property Name="MsgType" Type="nvarchar" MaxLength="128" />
+          <Property Name="Recognition" Type="nvarchar" MaxLength="128" />
         </EntityType>
         <EntityContainer Name="DB_999A5F_WDQWeiXinModelStoreContainer">
           <EntitySet Name="EventMsg" EntityType="Self.EventMsg" Schema="dbo" store:Type="Tables" />
@@ -111,8 +111,7 @@
           <EntitySet Name="VideoMsg" EntityType="Self.VideoMsg" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VoiceMsg" EntityType="Self.VoiceMsg" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_999A5F_WDQWeiXinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -121,97 +120,97 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Event" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Precision" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ToUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FromUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="EventKey" Type="String" MaxLength="4000" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Ticket" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Event" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Precision" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ToUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FromUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="EventKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Ticket" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ImageMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PicUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ToUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FromUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PicUrl" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ToUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FromUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LinkMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ToUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FromUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="MsgId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ToUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FromUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LocationMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Location_X" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Location_Y" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Scale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Label" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ToUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FromUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location_X" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Location_Y" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Scale" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Label" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ToUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FromUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TextMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ToUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FromUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ToUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FromUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="VideoMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MediaId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ThumbMediaId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ToUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FromUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MediaId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ThumbMediaId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ToUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FromUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="VoiceMsg">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MediaId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Format" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ToUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FromUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CreateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MsgType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Recognition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MediaId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Format" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ToUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FromUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MsgType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Recognition" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DB_999A5F_WDQWeiXinEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EventMsg" EntityType="Self.EventMsg" />
